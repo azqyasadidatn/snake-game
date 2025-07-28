@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0.5vh;
+    border: 0;
+}
+:root{
+    --base-color :#93e4fbc6;
+    --second-base-color :#c15074;
+    --thrd-base-color:#f7fbfb4e;
+
+    --ekstra-color-1:  #9DB4C0;
+    --ekstra-color-2: #3C3A38;
+    --extra-color-3 :#fc9bbaec;
+
+    --font-color-1 :#042130;
+    --main-font-color:#ffffff;
+    --font-color-2: #232323;
+    --font-color-3:#8f1139;
+}
+body{
+    background-color: var(--second-base-color);
+    font-size: 2rem;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: var(--font-color-1);
+}
+.gameCanvas{
+    background-color: #c15074;
+    border: 5px solid var(--font-color-3);
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    gap: 0.7rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.gameCanvas canvas{
+    background-color: var(--main-font-color);
+    border-radius: 10px;
+    box-shadow:0 2px 5px rgb(255, 255, 255);
+    display: block;
+}
+.info button{
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    color: var(--font-color-2);
+    font-size: 1rem;
+}
+.info button:hover{
+    background-color: var(--extra-color-3);
+    transform: scale(1.05);
+}
+.info{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.2 ease-in-out;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: var(--font-color-1);
+}
+.info-wrep{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow:0 2px 5px #f77ea4e7;
+    background-color:#f7a9c2b6;
+    margin: 0;
+    border-radius:10px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+#gameStatus{
+    font-size: 0.9rem;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: var(--font-color-1);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.2 ease-in-out;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+.btnDirection{
+    padding: 0.6rem 0.7rem 0.6rem 0.7rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 8px #9db4c091;
+    background-color: var(--main-font-color);
+    color: var(--font-color-2);
+}
+.btnDirection:hover{
+    background-color: var(--extra-color-3);
+    transform: scale(1.05);
+}
+#restartBtn{
+ margin-top: 0.7rem;
+ font-size: 2rem;
+ font-weight: bold;
+ padding: 0.5rem 1rem;
+ border-radius: 10px;
+}
+.controls .row{
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+/* --- TEMA BIRU (Setelah perbaikan) --- */
+body.blue {
+    --second-base-color: #ADD8E6; /* LightBlue */
+    --font-color-3: #4682B4; /* SteelBlue */
+    --extra-color-3: #87CEEB; /* SkyBlue */
+    --main-font-color: #F0F8FF; /* AliceBlue */
+    --font-color-1: #333; /* Warna teks umum */
+    --font-color-2: #333; /* Warna teks tombol */
+
+    /* Pindahkan juga properti ini ke sini */
+    color: var(--font-color-1);
+    background-color: #B0E0E6; /* PowderBlue */
+}
+
+/* Bagian lain dari tema biru (ini sudah benar) */
+body.blue .gameCanvas {
+    background-color: var(--second-base-color);
+    border-color: var(--font-color-3);
+}
+
+body.blue .gameCanvas canvas {
+    background-color: var(--main-font-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body.blue .info-wrep {
+    background-color: #B0E0E6;
+    box-shadow: 0 2px 5px rgba(70, 130, 180, 0.4);
+    color: var(--font-color-1);
+}
+
+body.blue .info button {
+    background-color: #87CEEB;
+    color: var(--font-color-2);
+}
+
+body.blue .info button:hover {
+    background-color: #7AC5CD;
+}
+
+body.blue .btnDirection {
+    background-color: #87CEEB;
+    color: var(--font-color-2);
+    box-shadow: 0 4px 8px rgba(70, 130, 180, 0.3);
+}
+
+body.blue .btnDirection:hover {
+    background-color: #7AC5CD;
+}
+/* --- TEMA KREM --- */
+body.cream-theme {
+    /* Warna utama tema krem */
+    --main-bg-color: #F5E8C7;       /* Krem utama untuk body */
+    --secondary-color: #E0C9A6;     /* Krem yang sedikit gelap untuk komponen */
+    --accent-color: #6F4F28;        /* Coklat sedang untuk highlight/border */
+    --text-color: #4A2C2A;          /* Coklat tua untuk teks */
+    --button-hover-color: #A0836A;  /* Coklat lebih terang untuk hover */
+
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+}
+
+body.cream-theme .gameCanvas {
+    background-color: var(--secondary-color);
+    border: 5px solid var(--accent-color);
+}
+
+body.cream-theme .gameCanvas canvas {
+    background-color: #FFF; /* Biarkan canvas putih agar ular coklat lebih menonjol */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.cream-theme .info-wrep {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+}
+
+body.cream-theme .info button {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+body.cream-theme .info button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+body.cream-theme #gameStatus {
+    color: var(--text-color);
+}
+
+body.cream-theme .title {
+    color: var(--text-color);
+}
+
+body.cream-theme .btnDirection {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.cream-theme .btnDirection:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* --- TEMA COKLAT TUA --- */
+body.dark-brown-theme {
+    /* Warna utama tema coklat tua */
+    --main-bg-color: #4A2C2A;       /* Coklat tua utama untuk body */
+    --secondary-color: #6F4F28;     /* Coklat sedang untuk komponen */
+    --accent-color: #F5E8C7;        /* Krem untuk highlight/border */
+    --text-color: #F5E8C7;          /* Krem untuk teks */
+    --button-hover-color: #E0C9A6;  /* Krem yang sedikit gelap untuk hover */
+
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+}
+
+body.dark-brown-theme .gameCanvas {
+    background-color: var(--secondary-color);
+    border: 5px solid var(--accent-color);
+}
+
+body.dark-brown-theme .gameCanvas canvas {
+    background-color: #3C3A38; /* Canvas lebih gelap agar ular krem menonjol */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-brown-theme .info-wrep {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+}
+
+body.dark-brown-theme .info button {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+body.dark-brown-theme .info button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+body.dark-brown-theme #gameStatus {
+    color: var(--text-color);
+}
+
+body.dark-brown-theme .title {
+    color: var(--text-color);
+}
+
+body.dark-brown-theme .btnDirection {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-brown-theme .btnDirection:hover {
+    background-color: var(--button-hover-color);
+}
